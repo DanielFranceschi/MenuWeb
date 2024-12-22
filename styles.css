@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis globais */
+:root {
+    --color-primary: #05770b;
+    --color-secondary: #ffffff;
+    --color-accent: #000000;
+    --color-text-light: #555;
+    --color-bg: #000000;
+    --color-border: #6b6a6a;
+
+    --font-family: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --font-size-title: 2rem;
+    --font-size-subtitle: 1.5rem;
+
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+
+    --radius: 8px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos gerais */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+    padding: var(--spacing-medium);
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Header */
+.menu-header {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: var(--spacing-large);
+}
+
+.menu-header__title {
+    font-size: var(--font-size-title);
+    font-weight: bold;
+}
+
+/* Seções do menu */
+.menu-section {
+    padding: var(--spacing-medium);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.menu-section__title {
+    font-size: var(--font-size-subtitle);
+    margin-bottom: var(--spacing-small);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Itens do menu */
+.menu-section__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-small);
+}
+
+.menu-item {
+    padding: var(--spacing-medium);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-secondary);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.menu-item__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-accent);
+}
+
+.menu-item__description {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-light);
+}
+
+.menu-item__price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-text-light);
+    text-align: right;
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+    .menu-section__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
