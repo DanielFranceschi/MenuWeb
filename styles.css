@@ -7,7 +7,7 @@
 
 /* Variáveis globais */
 :root {
-    --color-primary: #05770b;
+    --color-primary: #636c35;
     --color-secondary: #ffffff;
     --color-accent: #000000;
     --color-text-light: #555;
@@ -78,6 +78,8 @@ body {
 }
 
 .menu-item {
+    align-items: center;
+    margin-bottom: 10px; 
     padding: var(--spacing-medium);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
@@ -98,17 +100,34 @@ body {
 }
 
 .menu-item__description {
-    font-size: 0.9rem;
-    margin-bottom: var(--spacing-small);
+    display: flex;
+    font-weight: bold;
+    font-size: 1rem;
+    justify-content: space-between;
     color: var(--color-text-light);
 }
 
 .menu-item__price {
     font-size: 1rem;
     font-weight: bold;
-    color: var(--color-text-light);
+    color: var(--color-primary);
     text-align: right;
+    white-space: nowrap;
 }
+
+.menu-item__label{
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: var(--color-accent);
+}
+
+.menu-item__dots {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgb(78, 78, 78);
+}
+
 
 /* Responsividade */
 @media (min-width: 600px) {
