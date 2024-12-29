@@ -44,18 +44,105 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Header */
-.menu-header {
-    background-color: var(--color-primary);
+/* Estilo geral da navbar */
+.menu-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primary); /* Cor verde */
     color: var(--color-secondary);
-    text-align: center;
-    padding: var(--spacing-large);
+    padding: 10px 20px;
+    position: fixed; /* Fixa a barra no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Faz a barra ocupar toda a largura */
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
 }
 
-.menu-header__title {
+/* Adiciona espaçamento ao conteúdo principal para evitar sobreposição */
+body {
+    margin: 0;
+    padding-top: 80px; /* O mesmo valor que a altura da navbar */
+}
+
+/* Botão de menu (toggle) */
+.menu-navbar__toggle {
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Logo e título centralizados */
+.menu-navbar__center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-navbar__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: var(--font-size-title);
     font-weight: bold;
 }
+
+.menu-navbar__logo {
+    height: 70px; /* Ajuste o tamanho do logo */
+    width: auto;
+}
+
+/* Lista de categorias */
+.menu-navbar__categories {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-navbar__categories.hidden {
+    display: none; /* Esconde o menu por padrão */
+}
+
+.menu-navbar__categories li a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+    transition: border-color 0.3s;
+}
+
+.menu-navbar__categories li a:hover {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-navbar__categories {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--color-primary);
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu-navbar__categories li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-navbar__categories.hidden {
+        display: none;
+    }
+}
+
 
 /* Seções do menu */
 .menu-section {

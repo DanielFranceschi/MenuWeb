@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="menu-container">
-    <!-- Header -->
-    <header class="menu-header">
-        <img src="image/latrattoria.jpeg" alt="La Trattoria">
-        <h1 class="menu-header__title">Cardápio</h1>
-    </header>
+    <!-- Barra de Navegação Oculta -->
+    <nav class="menu-navbar">
+    <button class="menu-navbar__toggle">
+        ☰
+    </button>
+    <h2 class="menu-navbar__title">Cardapio</h2>
+    <img src="image/latrattoria.jpeg" alt="Logo" class="menu-navbar__logo">
+    <!-- Menu dropdown -->
+    <ul class="menu-navbar__categories hidden">
+        <li><a href="#Lanches">Lanches</a></li>
+        <li><a href="#Porções">Porções</a></li>
+        <li><a href="#BebidasN">Bebidas Não Alcoólicas</a></li>
+        <!-- Adicione mais categorias conforme necessário -->
+    </ul>
+</nav>
 
     <!-- Menu Content -->
     <main class="menu-content">
         <!-- Section: Lanches -->
-        <section class="menu-section">
+        <section id="Lanches" class="menu-section">
             <h2 class="menu-section__title">Lanches</h2>
             <div class="menu-section__items">
                 <!-- Reutilize o formato consistente para itens -->
@@ -25,180 +35,284 @@
                     <p class="menu-item__description">
                         Pão de hambúrguer, salada, muçarela, hambúrguer artesanal com acompanhamento de meia porção de batata frita.
                     </p>
-                    <span class="menu-item__price">R$ 29,50</span>
+                    <p class="menu-item__price">R$ 29,50</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Misto no Croissant</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 18,00</span>
+                    <p class="menu-item__description">Croissant recheado com presunto e queijo.</p>
+                    <p class="menu-item__price">R$ 18,00</p>
                 </article>
                 <article class="menu-item">
-                    <h3 class="menu-item__name">Croissant Requeijão ou Manteiga</h3>
+                    <h3 class="menu-item__name">Croissant com Requeijão ou Manteiga</h3>
                     <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 16,00</span>
+                    <p class="menu-item__price">R$ 16,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Ovo mexido/pão italiano e requeijão</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 22,00</span>
+                    <p class="menu-item__description">Ovo mexido com creme de leite acompanha pão e requeijão.</p>
+                    <p class="menu-item__price">R$ 22,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Pão Italiano na Manteiga</h3>
                     <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 8,00</span>
+                    <p class="menu-item__price">R$ 8,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Pão Italiano com Requeijão</h3>
                     <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 9,00</span>
+                    <p class="menu-item__price">R$ 9,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Misto Quente</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 12,00</span>
+                    <p class="menu-item__description">Pão francês com presunto e queijo.</p>
+                    <p class="menu-item__price">R$ 12,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Bauru</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 14,00</span>
+                    <p class="menu-item__description">Pão francês com presunto, queijo e tomate.</p>
+                    <p class="menu-item__price">R$ 14,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Americano</h3>
                     <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 15,00</span>
+                    <p class="menu-item__price">R$ 15,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Calabresa com Queijo</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 28,00</span>
+                    <p class="menu-item__description">Pão francês com Calabresa e queijo</p>
+                    <p class="menu-item__price">R$ 28,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Churrasco com Queijo</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 32,00</span>
+                    <p class="menu-item__description">Pão francês com carne e queijo</p>
+                    <p class="menu-item__price">R$ 32,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Pão, Alface, tomate, queijo e cebola</h3>
                     <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 12,00</span>
+                    <p class="menu-item__price">R$ 12,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Queijo Quente</h3>
-                    <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 12,00</span>
+                    <p class="menu-item__description">Pão com queijo derretido</p>
+                    <p class="menu-item__price">R$ 12,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Pão com Ovo</h3>
                     <p class="menu-item__description"></p>
-                    <span class="menu-item__price">R$ 15,00</span>
+                    <p class="menu-item__price">R$ 15,00</p>
                 </article>
                 <!-- Outros itens aqui... -->
             </div>
         </section>
 
         <!-- Section: Porções -->
-        <section class="menu-section">
-            <h2 class="menu-section__title">Porções</h2>
-            <div class="menu-section__items">
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Batata Frita</h3>
-                    <span class="menu-item__price">R$ 28,50</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Bolinho de Abóbora com Camarão</h3>
-                    <span class="menu-item__price">R$ 36,80</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Coxinha de Frango</h3>
-                    <span class="menu-item__price">R$ 33,50</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Coxinha de Costela Suína com Barbecue</h3>
-                    <span class="menu-item__price">R$ 36,80</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Coxinha de Espinafre</h3>
-                    <span class="menu-item__price">R$ 36,80</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Bolinha de Queijo</h3>
-                    <span class="menu-item__price">R$ 36,80</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Croquete de Carne</h3>
-                    <span class="menu-item__price">R$ 36,80</span>
-                </article>
-                <article class="menu-item">
-                    <h3 class="menu-item__name">Quibe com Coalhada</h3>
-                    <span class="menu-item__price">R$ 36,80</span>
+             <section id="Porções" class="menu-section">
+                 <h2 class="menu-section__title">Porções</h2>
+                 <div class="menu-section__items">
+                     <article class="menu-item">
+                         <h3 class="menu-item__name">Batata Frita</h3>
+                         <p class="menu-item__description"></p>
+                         <p class="menu-item__price">R$ 28,50</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Bolinho de Abóbora com Camarão</h3>
+                            <p class="menu-item__description"></p>
+                            <p class="menu-item__price">R$ 36,80</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Coxinha de Frango</h3>
+                            <p class="menu-item__description"></p>
+                            <p class="menu-item__price">R$ 33,50</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Coxinha de Costela Suína com Barbecue</h3>
+                            <p class="menu-item__description"></p>
+                            <p class="menu-item__price">R$ 36,80</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Coxinha de Espinafre</h3>
+                            <p class="menu-item__description"></p>
+                            <p class="menu-item__price">R$ 36,80</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Bolinha de Queijo</h3>
+                            <p class="menu-item__description"></p>
+                            <p class="menu-item__price">R$ 36,80</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Croquete de Carne</h3>
+                            <p class="menu-item__description"></p>
+                            <p class="menu-item__price">R$ 36,80</p>
+                        </article>
+                        <article class="menu-item">
+                            <h3 class="menu-item__name">Quibe com Coalhada</h3>
+                            <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 36,80</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Dadinho de Tapioca</h3>
-                    <span class="menu-item__price">R$ 31,40</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 31,40</p>
                 </article>
                 <article class="menu-item">
-                    <h3 class="menu-item__name">Filé Mignon Acebolado</h3>
-                    <span class="menu-item__price">R$ 55,00</span>
+                    <h3 class="menu-item__name">Filé-Mignon Acebolado</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 55,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Calabresa Acebolada</h3>
-                    <span class="menu-item__price">R$ 51,50</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 51,50</p>
                 </article>
                 <article class="menu-item">
-                    <h3 class="menu-item__name">Filé Mignon aos Quatro Queijos</h3>
-                    <span class="menu-item__price">R$ 55,00</span>
+                    <h3 class="menu-item__name">Filé-Mignon aos Quatro Queijos</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 55,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Mista (Filé e Calabresa Acebolada)</h3>
-                    <span class="menu-item__price">R$ 55,00</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 55,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Porção de Queijos</h3>
-                    <span class="menu-item__price">R$ 55,00</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 55,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Porção de Pastéis (Queijo, Carne e Mista)</h3>
-                    <span class="menu-item__price">R$ 31,00</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 31,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Pão de Queijo</h3>
-                    <span class="menu-item__price">R$ 16,00</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 16,00</p>
                 </article>
                 <!-- Outros itens aqui... -->
             </div>
         </section>
 
         <!-- Section: Bebidas -->
-        <section class="menu-section">
-            <h2 class="menu-section__title">Bebidas</h2>
+        <section id="BebidasN" class="menu-section">
+            <h2 class="menu-section__title">Bebidas não alcoólicas</h2>
             <div class="menu-section__items">
                 <article class="menu-item">
-                    <h3 class="menu-item__name">Água</h3>
-                    <span class="menu-item__price">R$ 5,00</span>
+                    <h3 class="menu-item__name">Água (sem gás/com gás)</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 5,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Refrigerante Lata</h3>
-                    <span class="menu-item__description">Cola cola (zero), Guaraná (zero), Tônica (zero)</span>
-                    <span class="menu-item__price">R$ 8,00</span>
+                    <p class="menu-item__description">Cola cola (normal/zero), Guaraná (normal/zero), Tônica (normal/zero), Soda</p>
+                    <p class="menu-item__price">R$ 8,00</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Suco de Laranja Natural</h3>
                     <span class="menu-item__dots">
                         <span class="menu-item__label">Copo:</span>
-                        <span class="menu-item__price">R$ 10,00</span>
+                        <span class="menu-item__price">R$ 9,70</span>
                     </span>
                     <span class="menu-item__dots">
                         <span class="menu-item__label">Jarra:</span>
-                        <span class="menu-item__price">R$ 25,00</span>
+                        <span class="menu-item__price">R$ 28,10</span>
                     </span>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Suco em Lata</h3>
-                    <span class="menu-item__price">R$ 9,10</span>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 9,10</p>
                 </article>
                 <article class="menu-item">
                     <h3 class="menu-item__name">Café</h3>
-                    <span class="menu-item__price">R$ 6,00</span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Café expresso</span>
+                        <span class="menu-item__price">R$ 5,80</span>
+                    </span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Café grande</span>
+                        <span class="menu-item__price">R$ 11,60</span>
+                    </span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Café com leite</span>
+                        <span class="menu-item__price">R$ 6,30</span>
+                    </span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Café com chantilly</span>
+                        <span class="menu-item__price">R$ 6,80</span>
+                    </span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Cappuccino</span>
+                        <span class="menu-item__price">R$ 6,30</span>
+                    </span>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Iced Tea</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">R$ 10,00</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">H2O</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">8,60</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Gatorade</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">9,00</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Red Mix</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">20,00</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Yellow Flavour</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">20,00</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Soda Italiana</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">10,00</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Pink Lemonade</h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price">10,00</p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Chocolate quente</h3>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Pequeno</span>
+                        <span class="menu-item__price">R$ 8,00</span>
+                    </span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Grande</span>
+                        <span class="menu-item__price">R$ 14,00</span>
+                    </span>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name">Energético</h3>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Copo</span>
+                        <span class="menu-item__price">R$ 10,00</span>
+                    </span>
+                    <span class="menu-item__dots">
+                        <span class="menu-item__label">Red Bull</span>
+                        <span class="menu-item__price">R$ 14,00</span>
+                    </span>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name"></h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price"></p>
+                </article>
+                <article class="menu-item">
+                    <h3 class="menu-item__name"></h3>
+                    <p class="menu-item__description"></p>
+                    <p class="menu-item__price"></p>
                 </article>
             </div>
         </section>
