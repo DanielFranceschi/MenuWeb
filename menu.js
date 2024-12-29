@@ -8,6 +8,32 @@ toggleButton.addEventListener('click', () => {
     categoriesMenu.classList.toggle('hidden');
 });
 
+// Função para rolar suavemente controlando a velocidade
+function smoothScroll(target, offset = 70, duration = 1000) {
+    const start = window.pageYOffset;
+    const targetPosition = target.offsetTop - offset;
+    const distance = targetPosition - start;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(timeElapsed, start, distance, duration);
+        window.scrollTo(0, run);
+
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
 // Fecha o menu ao clicar em um link de categoria e ajusta o scroll
 categoryLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -19,17 +45,9 @@ categoryLinks.forEach(link => {
         // Ajusta o scroll para o elemento-alvo
         const targetId = link.getAttribute('href'); // Obtém o ID do destino (ex.: #categoria)
         const targetElement = document.querySelector(targetId);
-        const offset = 90; // Altura do menu fixo (ajuste conforme necessário)
 
         if (targetElement) {
-            const elementPosition = targetElement.offsetTop;
-            const offsetPosition = elementPosition - offset;
-
-            // Rola suavemente para a posição ajustada
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth' // Rolagem suave
-            });
+            smoothScroll(targetElement, 89, 1000); // Offset de 89 e duração de 1000ms (1s)
         }
     });
 });
