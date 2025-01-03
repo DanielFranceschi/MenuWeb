@@ -144,6 +144,24 @@ body {
 }
 
 
+/* Responsividade */
+/* Estilo para telas maiores */
+@media (min-width: 1024px) {
+    .menu-navbar__categories {
+        justify-content: flex-start; /* Alinha à esquerda */
+        gap: 30px; /* Aumenta o espaço entre as categorias */
+        margin-left: 20px; /* Adiciona espaço da borda esquerda */
+        flex-direction: row; /* Mantém as categorias horizontais */
+    }
+
+    .menu-navbar__categories li a {
+        font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+        padding: 12px 25px; /* Ajusta o espaçamento interno */
+    }
+}
+
+
+
 /* Seções do menu */
 .menu-section {
     padding: var(--spacing-medium);
